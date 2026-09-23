@@ -13,7 +13,6 @@ Bounce2::Button bouton2; //classe bouton
 
 bool etatDel = LOW;
 bool etatDel2 = LOW;
-bool lectureBoucle = false;
 
 
 void setup() {
@@ -35,25 +34,19 @@ void setup() {
 
 void loop() {
     bouton1.update();
+    bouton2.update();
 
     if (bouton1.isPressed()) {
-
-        if (lectureBoucle == true) {
-            lectureBoucle = false;
-        } else {
-            lectureBoucle = true;
-        }
 
         digitalWrite(BROCHE_DEL1, HIGH);
         Serial.print("bouton6"); //description du bouton
         Serial.print(" "); // espace
-        Serial.print(2); // valeur
+        Serial.print(1); // valeur
         Serial.println(); // saut de ligne
     } else {
         digitalWrite(BROCHE_DEL1, LOW);
     }
 
-    bouton2.update();
 
     if (bouton2.pressed()) {
 
