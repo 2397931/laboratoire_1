@@ -1,4 +1,4 @@
-#N canvas 0 0 1278 980 12;
+#N canvas 769 109 1278 980 12;
 #X msg 125 68 devices;
 #X msg 231 151 close;
 #X obj 118 167 comport;
@@ -17,8 +17,8 @@
 #X obj 124 291 print;
 #X msg 179 101 close \, open 8 \, baud 115200 \, dtr 1;
 #X obj 379 316 route bouton6 bouton8;
-#X obj 580 491 pdchoco/sample_play~ \$0-break 1000 1000;
 #X msg 637 427 0;
+#X obj 580 491 pdchoco/sample_loop~ \$0-break;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -30,11 +30,11 @@
 #X connect 9 0 7 0;
 #X connect 9 1 7 1;
 #X connect 10 0 13 0;
-#X connect 11 0 18 0;
+#X connect 11 0 19 0;
 #X connect 13 0 14 0;
 #X connect 16 0 2 0;
 #X connect 17 0 9 0;
-#X connect 17 1 18 0;
-#X connect 18 0 12 0;
-#X connect 18 1 12 1;
-#X connect 19 0 18 0;
+#X connect 17 1 19 0;
+#X connect 18 0 19 0;
+#X connect 19 0 12 0;
+#X connect 19 1 12 1;

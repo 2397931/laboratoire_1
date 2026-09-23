@@ -34,7 +34,6 @@ void setup() {
 
 void loop() {
     bouton1.update();
-    bouton2.update();
 
     if (bouton1.isPressed()) {
 
@@ -46,6 +45,8 @@ void loop() {
     } else {
         digitalWrite(BROCHE_DEL1, LOW);
     }
+
+    bouton2.update();
 
 
     if (bouton2.pressed()) {
